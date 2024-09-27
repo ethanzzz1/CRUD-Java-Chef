@@ -10,6 +10,7 @@ import java.util.UUID;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import vista.frmMenu;
+import vista.frmMenuu;
 
 /**
  *
@@ -68,7 +69,7 @@ public class elChef {
         Connection conexion = ClaseConexion.getConexion();
         try {
             //Variable que contiene la Query a ejecutar
-            String sql = "INSERT INTO tbbarbero(UUID_Chef, Nombre_Chef, Edad_Chef, Peso_Chef, Correo_Chef) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO tbChef(UUID_Chef, Nombre_Chef, Edad_Chef, Peso_Chef, Correo_Chef) VALUES (?, ?, ?, ?, ?)";
             //Creamos el PreparedStatement que ejecutará la Query
             PreparedStatement pstmt = conexion.prepareStatement(sql);
             //Establecer valores de la consulta SQL
@@ -141,7 +142,7 @@ public class elChef {
         }
     }
              //CARGAR-------------------------------------------------------------------------------------------------------------------------------------
-          public void cargarDatosTabla(frmMenu vista) {
+          public void cargarDatosTabla(frmMenuu vista) {
         // Obtén la fila seleccionada 
         int filaSeleccionada = vista.tbChef.getSelectedRow();
 
@@ -188,12 +189,14 @@ public class elChef {
         }
     }
              
-              public void limpiar(frmMenu vista) {
+              public void limpiar(frmMenuu vista) {
                      vista.txtNombre.setText("");
                      vista.txtEdad.setText("");
                      vista.txtPeso.setText("");
                      vista.txtCorreo.setText("");
               }
+
+    
              
              
 }

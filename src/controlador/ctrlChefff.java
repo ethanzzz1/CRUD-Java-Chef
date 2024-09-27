@@ -4,15 +4,15 @@ package controlador;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import modelo.elChef;
-import vista.frmMenu;
+import vista.frmMenuu;
 
 
 public class ctrlChefff implements MouseListener{
     
-    frmMenu vista;
+    frmMenuu vista;
     elChef modelo;
     
-    public ctrlChefff(frmMenu vista, elChef modelo){
+    public ctrlChefff(frmMenuu vista, elChef modelo){
         
          this.vista = vista;
         this.modelo = modelo;
